@@ -3,12 +3,9 @@ import Analyzer.BrutForce;
 import Analyzer.StaticAnalyzer;
 import DecryptEncrypt.Decryptor;
 import DecryptEncrypt.Encryptor;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.InputMismatchException;
-import java.util.Random;
 import java.util.Scanner;
 
 public class GoBabyGo {

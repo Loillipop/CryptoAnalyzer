@@ -9,7 +9,7 @@ import java.util.List;
 public class FilesReader {
     public static List<Character> readFileFromString(Path input) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(input.toFile()));
-        List<Character> redCharArrayList = new ArrayList<Character>();
+        List<Character> redCharArrayList = new ArrayList<>();
         int c;
         while  ((c=reader.read())!= -1) {
             redCharArrayList.add((char) c);
