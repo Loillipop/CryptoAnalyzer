@@ -10,12 +10,13 @@ public class GoBabyGo {
     public static void main(String[] args) {
         try {
             printTextInterface();
-            inputData();
+            inputAndOutputData();
             }catch (InputMismatchException e) {
                    System.out.println("Возникла непредвиденная ошибка: Несовпадение типов введенных значений" );
                    e.printStackTrace();
             }
     }
+
     public static void printTextInterface() {
                 System.out.printf("Выберите требуемое действие:\n1 - %s\n2 - %s\n3 - %s\n4 - %s\n5 - Выход\n",
                 Decryptor.getNameAction(),
@@ -60,29 +61,29 @@ public class GoBabyGo {
         Scanner scanner = new Scanner(System.in);
         return  scanner.nextLine();
     }
-    public static void inputData () throws InputMismatchException{
+    public static void inputAndOutputData () throws InputMismatchException{
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
              switch (scanner.nextInt()) {
                    case 1:
                         printChoiseUser(1);
-                        String path1 = pathToFile();
-                        Decryptor.letsDecryptThisFile();
+                        String input1 = pathToFile();
+                        Decryptor.letsDecryptThisFile(input1);
                         break;
                    case 2:
                         printChoiseUser(2);
-                        String path2 = pathToFile();
-                        Encryptor.letsEncryptThisFile();
+                        String input2 = pathToFile();
+                        Encryptor.letsEncryptThisFile(input2);
                         break;
                    case 3:
                         printChoiseUser(3);
                         int key  = countBruteForceKey();
-                        BrutForce.letsBrutThisFile();
+                        BrutForce.letsBrutThisFile(key);
                         break;
                    case 4:
                         printChoiseUser(4);
-                        String path4 = pathToFile();
-                        StaticAnalyzer.letsMakeStaticAnalyze();
+                        String input4 = pathToFile();
+                        StaticAnalyzer.letsMakeStaticAnalyze(input4);
                         break;
                    case 5:
                         printChoiseUser(5);
@@ -91,4 +92,5 @@ public class GoBabyGo {
                break;
         }
     }
+
 }

@@ -1,12 +1,14 @@
 package DecryptEncrypt;
 
 public class Encryptor {
-    private static String nameAction = "Encrypt";
+    private static final String nameAction = "Encrypt";
     public static String getNameAction () {
         return nameAction;
     }
-    public static void letsEncryptThisFile () {
-        System.out.println("Операция завершена");
+    public static void letsEncryptThisFile (String input) {
+        String s = "c:\\";
+        String output = "Зашифрованный файл находится по пути:" +s;
+        System.out.println(output);
     }
 
 }
