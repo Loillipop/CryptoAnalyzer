@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="Made UserInterface">
+    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="fix some features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyzer/BrutForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyzer/BrutForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOStream/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IOStream/FilesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOStream/FileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IOStream/FilesWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +55,26 @@
       <recent name="$PROJECT_DIR$/src/UserInterface" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="GoBabyGo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UserInterface.GoBabyGo" />
+      <module name="CryptoAnalyzer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UserInterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GoBabyGo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +108,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694051391716</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Made UserInterface">
+      <option name="closed" value="true" />
+      <created>1694052707280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694052707280</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix some features">
+      <option name="closed" value="true" />
+      <created>1694052874762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694052874762</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new files classes" />
     <MESSAGE value="Made UserInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made UserInterface" />
+    <MESSAGE value="fix some features" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some features" />
   </component>
 </project>
