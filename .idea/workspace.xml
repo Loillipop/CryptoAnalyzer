@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="fix some features">
+    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="fix Warnings">
+      <change afterPath="$PROJECT_DIR$/src/stages/Decoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stages/Encoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IOStream/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IOStream/FilesReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IOStream/FileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IOStream/FilesWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyzer/BrutForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/BrutForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/StaticAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOStream/FilesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iostreams/FilesToListReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IOStream/FilesWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iostreams/ListToFilesWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/GoBabyGo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +60,11 @@
   </component>
   <component name="RunManager">
     <configuration name="GoBabyGo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="UserInterface.GoBabyGo" />
+      <option name="MAIN_CLASS_NAME" value="userinterface.GoBabyGo" />
       <module name="CryptoAnalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserInterface.*" />
+          <option name="PATTERN" value="userinterface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +127,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694052874762</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix some features and inizialaze reader and writer">
+      <option name="closed" value="true" />
+      <created>1694089344668</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694089344668</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix Warnings">
+      <option name="closed" value="true" />
+      <created>1694089418419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694089418419</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix Warnings">
+      <option name="closed" value="true" />
+      <created>1694089450980</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694089450980</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +169,8 @@
     <MESSAGE value="add new files classes" />
     <MESSAGE value="Made UserInterface" />
     <MESSAGE value="fix some features" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some features" />
+    <MESSAGE value="fix some features and inizialaze reader and writer" />
+    <MESSAGE value="fix Warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Warnings" />
   </component>
 </project>

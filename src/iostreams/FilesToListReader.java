@@ -1,12 +1,11 @@
-package IOStream;
-
+package iostreams;
 
 import java.io.*;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilesReader {
+public class FilesToListReader {
     public static List<Character> readFileFromString(Path input) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(input.toFile()));
         List<Character> redCharArrayList = new ArrayList<>();

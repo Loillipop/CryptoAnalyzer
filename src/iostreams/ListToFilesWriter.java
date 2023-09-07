@@ -1,4 +1,4 @@
-package IOStream;
+package iostreams;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
-public class FilesWriter {
+public class ListToFilesWriter {
 
     public static String writeToFileReturnString(List<Character> outputArrayList, Path path) throws IOException {
        File outputFile = new File(String.valueOf(path.getParent()), "OutputFile.txt");

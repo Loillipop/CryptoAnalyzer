@@ -1,4 +1,4 @@
-package Analyzer;
+package stages;
 
 import java.nio.file.Path;
 
@@ -8,8 +8,7 @@ public class StaticAnalyzer {
         return nameAction;
     }
     public static void letsMakeStaticAnalyze (Path input) {
-        String s = "c:\\";
-        String output = "Зашифрованный файл находится по пути:" +s;
+        String output = "В разработке";
         System.out.println(output);
     }
 
