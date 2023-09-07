@@ -55,8 +55,7 @@ public class GoBabyGo {
     }
     public static Path pathToFile () throws InputMismatchException {
         Scanner scanner = new Scanner(System.in);
-        Path path = Path.of(scanner.nextLine());
-        return  path;
+        return  Path.of(scanner.nextLine());
     }
     public static void inputAndOutputData () throws InputMismatchException, IOException {
         Scanner scanner = new Scanner(System.in);
