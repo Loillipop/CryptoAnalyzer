@@ -25,27 +25,17 @@ public class GoBabyGo {
                 StaticAnalyzer.getNameAction());
                 }
     public static void printChoiseUser(int i) {
-       switch (i) {
-             case 1:
-                  System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
-                  Decryptor.getNameAction());
-                  break;
-             case 2:
-                  System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
-                  Encryptor.getNameAction());
-                  break;
-             case 3:
-                  System.out.printf("Вы выбрали пункт 3 - %s\nУкажите значение ключа от 0 до 100:\n",
-                  BrutForce.getNameAction());
-                  break;
-             case 4:
-                  System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
-                  StaticAnalyzer.getNameAction());
-                  break;
-             case 5:
-                  System.out.println("Вы выбрали пункт 5 - Выход из программы.");
-                  break;
-       }
+        switch (i) {
+            case 1 -> System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
+                    Decryptor.getNameAction());
+            case 2 -> System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
+                    Encryptor.getNameAction());
+            case 3 -> System.out.printf("Вы выбрали пункт 3 - %s\nУкажите значение ключа от 0 до 100:\n",
+                    BrutForce.getNameAction());
+            case 4 -> System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
+                    StaticAnalyzer.getNameAction());
+            case 5 -> System.out.println("Вы выбрали пункт 5 - Выход из программы.");
+        }
     }
     public static int countBruteForceKey () throws InputMismatchException {
            Scanner scanner = new Scanner(System.in);
@@ -64,31 +54,29 @@ public class GoBabyGo {
     public static void inputAndOutputData () throws InputMismatchException{
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
-             switch (scanner.nextInt()) {
-                   case 1:
-                        printChoiseUser(1);
-                        String input1 = pathToFile();
-                        Decryptor.letsDecryptThisFile(input1);
-                        break;
-                   case 2:
-                        printChoiseUser(2);
-                        String input2 = pathToFile();
-                        Encryptor.letsEncryptThisFile(input2);
-                        break;
-                   case 3:
-                        printChoiseUser(3);
-                        int key  = countBruteForceKey();
-                        BrutForce.letsBrutThisFile(key);
-                        break;
-                   case 4:
-                        printChoiseUser(4);
-                        String input4 = pathToFile();
-                        StaticAnalyzer.letsMakeStaticAnalyze(input4);
-                        break;
-                   case 5:
-                        printChoiseUser(5);
-                        break;
-             }
+            switch (scanner.nextInt()) {
+                case 1 -> {
+                    printChoiseUser(1);
+                    String input1 = pathToFile();
+                    Decryptor.letsDecryptThisFile(input1);
+                }
+                case 2 -> {
+                    printChoiseUser(2);
+                    String input2 = pathToFile();
+                    Encryptor.letsEncryptThisFile(input2);
+                }
+                case 3 -> {
+                    printChoiseUser(3);
+                    int key = countBruteForceKey();
+                    BrutForce.letsBrutThisFile(key);
+                }
+                case 4 -> {
+                    printChoiseUser(4);
+                    String input4 = pathToFile();
+                    StaticAnalyzer.letsMakeStaticAnalyze(input4);
+                }
+                case 5 -> printChoiseUser(5);
+            }
                break;
         }
     }
