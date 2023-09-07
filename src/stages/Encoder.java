@@ -13,10 +13,6 @@ public class Encoder {
     public static String getEncrypt () {
         return encrypt;
     }
-    private static final String decrypt = "Decrypt";
-    public static String getDecrypt () {
-        return decrypt;
-    }
     public static void letsEnDecryptThisFile (Path input, int key) throws IOException {
         List<Character> unEncryptedArrayList = FilesToListReader.readFileFromString(input);
         ArrayList<Character> encryptedArrayList = new ArrayList<>();

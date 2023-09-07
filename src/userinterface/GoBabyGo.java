@@ -22,7 +22,7 @@ public class GoBabyGo {
     public static void printTextInterface() {
         System.out.printf("Выберите требуемое действие:\n1 - %s\n2 - %s\n3 - %s\n4 - %s\n5 - Выход\n",
                Encoder.getEncrypt(),
-               Encoder.getDecrypt(),
+               Decoder.getDecrypt(),
                BrutForce.getNameAction(),
                StaticAnalyzer.getNameAction());
     }
@@ -31,7 +31,7 @@ public class GoBabyGo {
             case 1 -> System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
                     Encoder.getEncrypt());
             case 2 -> System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
-                    Encoder.getDecrypt());
+                    Decoder.getDecrypt());
             case 3 -> System.out.printf("Вы выбрали пункт 3 - %s\nпожалуйста введите путь к файлам для подбора:\n",
                     BrutForce.getNameAction());
             case 4 -> System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
