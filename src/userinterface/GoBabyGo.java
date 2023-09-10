@@ -31,10 +31,10 @@ public class GoBabyGo {
         while (scanner.hasNext()) {
             switch (scanner.nextInt()) {
                 case 1 -> {
-                    printChoiseUser(Choise.ENCODER); // Выводим информационный текст (Enum?)
+                    printChoiseUser(Choise.ENCODER); // Выводим информационный текст
                     Path input1 = pathToFile(); // Вводим путь к файлу для шифрования
                     int key = inputCheckKeyStages(); // инициализаруем ключ для шифрования
-                    Encoder.letsEnDecryptThisFile(input1, key); // передаем ключ и путь в метод  шифрования класса Encrypt
+                    Encoder.letsEncryptThisFile(input1, key); // передаем ключ и путь в метод  шифрования класса Encoder
                 }
                 case 2 -> {
                     printChoiseUser(Choise.DECODER);
