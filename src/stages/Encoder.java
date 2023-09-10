@@ -8,11 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Encoder {
-    private static final String encrypt = "Encrypt";
-
-    public static String getEncrypt () {
-        return encrypt;
-    }
     public static void letsEnDecryptThisFile (Path input, int key) throws IOException {
         List<Character> unEncryptedArrayList = FilesToListReader.readFileFromString(input);
         ArrayList<Character> encryptedArrayList = new ArrayList<>();

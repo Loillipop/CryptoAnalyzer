@@ -1,5 +1,5 @@
 package userinterface;
-import stages.BrutForce;
+
 import stages.Decoder;
 import stages.StaticAnalyzer;
 import stages.Encoder;
@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import static stages.BrutForce.letsBrutThisFile;
 
 public class GoBabyGo {
     public static void main(String[] args) {
@@ -14,29 +15,29 @@ public class GoBabyGo {
             printTextInterface();
             inputAndOutputData();
             }catch (InputMismatchException | IOException e) {
-                   System.out.println("Возникла непредвиденная ошибка: Несовпадение типов введенных значений" );
+                   System.out.println("Возникла непредвиденная ошибка" +e.getCause());
                    e.printStackTrace();
             }
     }
 
     public static void printTextInterface() {
         System.out.printf("Выберите требуемое действие:\n1 - %s\n2 - %s\n3 - %s\n4 - %s\n5 - Выход\n",
-               Encoder.getEncrypt(),
-               Decoder.getDecrypt(),
-               BrutForce.getNameAction(),
-               StaticAnalyzer.getNameAction());
+               Choise.ENCODER.getChoise(),
+               Choise.DECODER.getChoise(),
+               Choise.BRUTFORCE.getChoise(),
+               Choise.STATICANALYZER.getChoise());
     }
-    public static void printChoiseUser(int i) {
-        switch (i) {
-            case 1 -> System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
-                    Encoder.getEncrypt());
-            case 2 -> System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
-                    Decoder.getDecrypt());
-            case 3 -> System.out.printf("Вы выбрали пункт 3 - %s\nпожалуйста введите путь к файлам для подбора:\n",
-                    BrutForce.getNameAction());
-            case 4 -> System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
-                    StaticAnalyzer.getNameAction());
-            case 5 -> System.out.println("Вы выбрали пункт 5 - Выход из программы.");
+    public static void printChoiseUser(Choise choise) {
+        switch (choise) {
+            case ENCODER -> System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
+                    Choise.ENCODER.getChoise());
+            case DECODER -> System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
+                    Choise.DECODER.getChoise());
+            case BRUTFORCE -> System.out.printf("Вы выбрали пункт 3 - %s\nпожалуйста введите путь к файлам для подбора:\n",
+                    Choise.BRUTFORCE.getChoise());
+            case STATICANALYZER -> System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
+                    Choise.STATICANALYZER.getChoise());
+            case EXIT -> System.out.println("Вы выбрали пункт 5 - Выход из программы.");
         }
     }
     public static int inputCheckKeyStages () throws InputMismatchException {
@@ -62,29 +63,29 @@ public class GoBabyGo {
         while (scanner.hasNext()) {
             switch (scanner.nextInt()) {
                 case 1 -> {
-                    printChoiseUser(1); // Выводим информационный текст (Enum?)
+                    printChoiseUser(Choise.ENCODER); // Выводим информационный текст (Enum?)
                     Path input1 = pathToFile(); // Вводим путь к файлу для шифрования
                     int key = inputCheckKeyStages(); // инициализаруем ключ для шифрования
                     Encoder.letsEnDecryptThisFile(input1,key); // передаем ключ и путь в метод  шифрования класса Encrypt
                 }
                 case 2 -> {
-                    printChoiseUser(2);
+                    printChoiseUser(Choise.DECODER);
                     Path input2 = pathToFile();
                     int key = inputCheckKeyStages();
                     Decoder.letsDecryptThisFile(input2, key);
                 }
                 case 3 -> {
-                    printChoiseUser(3);
+                    printChoiseUser(Choise.BRUTFORCE);
                     Path input3 = pathToFile();
                     int key = inputCheckKeyStages();
-                    BrutForce.letsBrutThisFile(input3,key);
+                    letsBrutThisFile(input3,key);
                 }
                 case 4 -> {
-                    printChoiseUser(4);
+                    printChoiseUser(Choise.STATICANALYZER);
                     Path input4 = pathToFile();
                     StaticAnalyzer.letsMakeStaticAnalyze(input4);
                 }
-                case 5 -> printChoiseUser(5);
+                case 5 -> printChoiseUser(Choise.EXIT);
             }
                break;
         }

@@ -2,17 +2,12 @@ package stages;
 
 import iostreams.FilesToListReader;
 import iostreams.ListToFilesWriter;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Decoder {
-    private static final String decrypt = "Decrypt";
-    public static String getDecrypt () {
-        return decrypt;
-    }
     public static void letsDecryptThisFile (Path input, int key) throws IOException {
         List<Character> unEncryptedArrayList = FilesToListReader.readFileFromString(input);
         ArrayList<Character> encryptedArrayList = new ArrayList<>();

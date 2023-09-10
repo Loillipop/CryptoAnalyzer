@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="fix Warnings">
-      <change afterPath="$PROJECT_DIR$/src/stages/Decoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stages/Encoder.java" afterDir="false" />
+    <list default="true" id="e0496cc5-2394-4029-887e-c61970fd5e27" name="Changes" comment="fix warnings">
+      <change afterPath="$PROJECT_DIR$/src/userinterface/Choise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyzer/BrutForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/BrutForce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Analyzer/StaticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/StaticAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Decryptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DecryptEncrypt/Encryptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IOStream/FilesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iostreams/FilesToListReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IOStream/FilesWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iostreams/ListToFilesWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface/GoBabyGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/GoBabyGo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iostreams/FilesToListReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iostreams/FilesToListReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stages/BrutForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/BrutForce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stages/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stages/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/Encoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stages/StaticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stages/StaticAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/GoBabyGo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/GoBabyGo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -41,6 +41,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2V2hN4c2RsAB4uwObEu1oPf0rGx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -151,7 +154,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694089450980</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add features">
+      <option name="closed" value="true" />
+      <created>1694098743537</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694098743537</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix warnings">
+      <option name="closed" value="true" />
+      <created>1694098820745</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694098820745</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +190,44 @@
     <MESSAGE value="fix some features" />
     <MESSAGE value="fix some features and inizialaze reader and writer" />
     <MESSAGE value="fix Warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Warnings" />
+    <MESSAGE value="add features" />
+    <MESSAGE value="fix warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix warnings" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stages/BrutForce.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

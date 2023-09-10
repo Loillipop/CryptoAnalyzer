@@ -16,7 +16,4 @@ public class FilesToListReader {
         reader.close();
   return redCharArrayList;
     }
-
-
-
 }

@@ -2,36 +2,55 @@ package stages;
 
 import iostreams.FilesToListReader;
 import iostreams.ListToFilesWriter;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BrutForce {
-    private static int usedkey = 0;
-    private static final String nameAction = "BruteForce";
-    public static String getNameAction () {
-        return nameAction;
-    }
-    public static void letsBrutThisFile (Path input, int key) throws IOException {
 
-        for (int i = 0; i < key; i++) {
-            List<Character> unEncryptedArrayList = FilesToListReader.readFileFromString(input);
-            ArrayList<Character> encryptedArrayList = new ArrayList<>();
-            for (int value : unEncryptedArrayList) {
-                encryptedArrayList.add((char) (value + key));
-            }
-            Path output = Path.of(ListToFilesWriter.writeToFileReturnString(encryptedArrayList, input));
-            BufferedReader in = new BufferedReader(new FileReader(input.toFile()));
-            BufferedReader out = new BufferedReader(new FileReader(output.toFile()));
-                if (in.hashCode() == out.hashCode()) {
+    public static void letsBrutThisFile(Path input, int key) throws IOException {
+        Path output = null;
+        int usedkey = 0;
+            for (int i = 1; i < key; i++) {
+                ArrayList<Character> encryptedArrayList = readDecodeWriteToArray(input, i);
+                if (checkArrayToAlphabet(encryptedArrayList)) {
                     usedkey = i;
+                    output = Path.of(ListToFilesWriter.writeToFileReturnString(encryptedArrayList, input));
                 }
-            }
         }
-        String output = "Нужный нам ключ для расшифровки:" + usedkey;
+            if (usedkey !=0 ) {
+                System.out.println("Нужный нам ключ для расшифровки:" + usedkey);
+                System.out.println("Расшифрованный файл :" + output);
+            }
+            else {
+                System.out.println("Невозможно подобрать ключ");
+            }
+    }
 
+    public static boolean checkArrayToAlphabet (ArrayList<Character> encryptedArrayList) throws IOException {
+        boolean result = true;
+       String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
+        int count = 0;
+        while (result) {
+            for (char value : encryptedArrayList) {
+                count++;
+                   if (!alphabet.contains(String.valueOf(value))) {
+                   result = false;
+                   break;
+                    }
+                }
+            break;
+            }
+    return result;
+    }
+
+    public static ArrayList<Character> readDecodeWriteToArray(Path input, int key) throws IOException {
+        List<Character> unEncryptedArrayList = FilesToListReader.readFileFromString(input);
+        ArrayList<Character> encryptedArrayList = new ArrayList<>();
+        for (int value : unEncryptedArrayList) {
+            encryptedArrayList.add((char) (value - key));
+        }
+        return encryptedArrayList;
+    }
 }
