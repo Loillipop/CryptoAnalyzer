@@ -20,10 +20,7 @@ public class GoBabyGo {
             }
     }
 
-    public static void printTextInterface() {
-        System.out.println("Выберите требуемое действие:");
-        System.out.println(Constant.MENU);
-    }
+    public static void printTextInterface() {System.out.println(Constant.MENU);}
     public static void printChoiseUser(Choise choise) {
         switch (choise) {
             case ENCODER -> System.out.printf("Вы выбрали пункт 1 - %s\nпожалуйста введите путь к файлу:\n",
