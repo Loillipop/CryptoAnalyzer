@@ -25,7 +25,7 @@ public class BrutForce {
                 System.out.println("Расшифрованный файл :" + output);
             }
             else {
-                System.out.println("Невозможно подобрать ключ");
+                System.out.println("Невозможно подобрать ключ, попробуйте увеличить значение ключа");
             }
     }
 

@@ -14,7 +14,7 @@ public class GoBabyGo {
         try {
             printTextInterface();
             inputAndOutputData();
-            }catch (InputMismatchException | IOException e) {
+            }catch (InputMismatchException |NullPointerException| IOException e) {
                    System.out.println("Возникла непредвиденная ошибка" +e.getCause());
                    e.printStackTrace();
             }
