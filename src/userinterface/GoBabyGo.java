@@ -65,12 +65,10 @@ public class GoBabyGo {
                     Choise.ENCODER.getChoise());
             case DECODER -> System.out.printf("Вы выбрали пункт 2 - %s\nпожалуйста введите путь к файлу:\n",
                     Choise.DECODER.getChoise());
-            case BRUTFORCE ->
-                    System.out.printf("Вы выбрали пункт 3 - %s\nпожалуйста введите путь к файлам для подбора:\n",
-                            Choise.BRUTFORCE.getChoise());
-            case STATICANALYZER ->
-                    System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
-                            Choise.STATICANALYZER.getChoise());
+            case BRUTFORCE -> System.out.printf("Вы выбрали пункт 3 - %s\nпожалуйста введите путь к файлам для подбора:\n",
+                    Choise.BRUTFORCE.getChoise());
+            case STATICANALYZER -> System.out.printf("Вы выбрали пункт 4 - %s\nпожалуйста введите путь к файлу для анализа:\n",
+                    Choise.STATICANALYZER.getChoise());
             case EXIT -> System.out.println("Вы выбрали пункт 5 - Выход из программы.");
         }
     }
