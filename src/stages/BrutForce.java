@@ -5,6 +5,7 @@ import iostreams.ListToFilesWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class BrutForce {
@@ -28,21 +29,19 @@ public class BrutForce {
             }
     }
 
-    public static boolean checkArrayToAlphabet (ArrayList<Character> encryptedArrayList) throws IOException {
+    public static boolean checkArrayToAlphabet (ArrayList<Character> encryptedArrayList) throws InputMismatchException {
         boolean result = true;
-       String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
-        int count = 0;
+        String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
         while (result) {
             for (char value : encryptedArrayList) {
-                count++;
-                   if (!alphabet.contains(String.valueOf(value))) {
-                   result = false;
-                   break;
-                    }
+                if (!alphabet.contains(String.valueOf(value))) {
+                result = false;
+                break;
                 }
-            break;
             }
-    return result;
+        break;
+        }
+        return result;
     }
 
     public static ArrayList<Character> readDecodeWriteToArray(Path input, int key) throws IOException {
