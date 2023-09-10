@@ -6,8 +6,8 @@ public class Constant {
                     Выберите требуемое действие:
                        1 - Encoder
                        2 - Decoder
-                       2 - BruteForce
-                       3 - StaticAnalyzer
-                       4 - Выход
+                       3 - BruteForce
+                       4 - StaticAnalyzer
+                       5 - Выход
                     """;
 }

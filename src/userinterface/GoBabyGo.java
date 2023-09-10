@@ -28,7 +28,7 @@ public class GoBabyGo {
 
     public static void inputAndOutputData() throws InputMismatchException, IOException {
         Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()) {
+        while (true) {
             switch (scanner.nextInt()) {
                 case 1 -> {
                     printChoiseUser(Choise.ENCODER); // Выводим информационный текст
@@ -54,8 +54,8 @@ public class GoBabyGo {
                     StaticAnalyzer.letsMakeStaticAnalyze(input4);
                 }
                 case 5 -> printChoiseUser(Choise.EXIT);
+                default -> System.out.println("Некорректный выбор. Введите перечисленные значения");
             }
-            break;
         }
     }
 
