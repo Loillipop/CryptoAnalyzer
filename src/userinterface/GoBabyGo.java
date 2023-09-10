@@ -1,8 +1,7 @@
 package userinterface;
 
-import stages.Decoder;
 import stages.StaticAnalyzer;
-import stages.Encoder;
+import stages.EnDecoder;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -34,13 +33,13 @@ public class GoBabyGo {
                     printChoiseUser(Choise.ENCODER); // Выводим информационный текст
                     Path input1 = pathToFile(); // Вводим путь к файлу для шифрования
                     int key = inputCheckKeyStages(); // инициализаруем ключ для шифрования
-                    Encoder.letsEncryptThisFile(input1, key); // передаем ключ и путь в метод  шифрования класса Encoder
+                    EnDecoder.letsEnDecryptThisFile(input1, key); // передаем ключ и путь в метод  шифрования класса Encoder
                 }
                 case 2 -> {
                     printChoiseUser(Choise.DECODER);
                     Path input2 = pathToFile();
-                    int key = inputCheckKeyStages();
-                    Decoder.letsDecryptThisFile(input2, key);
+                    int key = - inputCheckKeyStages();
+                    EnDecoder.letsEnDecryptThisFile(input2, key);
                 }
                 case 3 -> {
                     printChoiseUser(Choise.BRUTFORCE);
@@ -56,6 +55,7 @@ public class GoBabyGo {
                 case 5 -> printChoiseUser(Choise.EXIT);
                 default -> System.out.println("Некорректный выбор. Введите перечисленные значения");
             }
+            break;
         }
     }
 

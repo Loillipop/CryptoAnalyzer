@@ -39,6 +39,7 @@ public class BrutForce {
     }
 
     public static boolean checkArrayToAlphabet(ArrayList<Character> encryptedArrayList) throws InputMismatchException {
+
         boolean result = true;
         String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
         while (result) {
