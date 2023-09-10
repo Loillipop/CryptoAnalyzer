@@ -21,11 +21,8 @@ public class GoBabyGo {
     }
 
     public static void printTextInterface() {
-        System.out.printf("Выберите требуемое действие:\n1 - %s\n2 - %s\n3 - %s\n4 - %s\n5 - Выход\n",
-               Choise.ENCODER.getChoise(),
-               Choise.DECODER.getChoise(),
-               Choise.BRUTFORCE.getChoise(),
-               Choise.STATICANALYZER.getChoise());
+        System.out.println("Выберите требуемое действие:");
+        System.out.println(Constant.MENU);
     }
     public static void printChoiseUser(Choise choise) {
         switch (choise) {
