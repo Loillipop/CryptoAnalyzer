@@ -2,6 +2,7 @@ package stages;
 
 import iostreams.FilesToListReader;
 import iostreams.ListToFilesWriter;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -13,35 +14,19 @@ public class BrutForce {
     public static void letsBrutThisFile(Path input, int key) throws IOException {
         Path output = null;
         int usedkey = 0;
-            for (int i = 1; i < key; i++) {
-                ArrayList<Character> encryptedArrayList = readDecodeWriteToArray(input, i);
-                if (checkArrayToAlphabet(encryptedArrayList)) {
-                    usedkey = i;
-                    output = Path.of(ListToFilesWriter.writeToFileReturnString(encryptedArrayList, input));
-                }
+        for (int i = 1; i < key; i++) {
+            ArrayList<Character> encryptedArrayList = readDecodeWriteToArray(input, i);
+            if (checkArrayToAlphabet(encryptedArrayList)) {
+                usedkey = i;
+                output = Path.of(ListToFilesWriter.writeToFileReturnString(encryptedArrayList, input));
+            }
         }
-            if (usedkey !=0 ) {
-                System.out.println("Нужный нам ключ для расшифровки:" + usedkey);
-                System.out.println("Расшифрованный файл :" + output);
-            }
-            else {
-                System.out.println("Невозможно подобрать ключ, попробуйте увеличить значение ключа");
-            }
-    }
-
-    public static boolean checkArrayToAlphabet (ArrayList<Character> encryptedArrayList) throws InputMismatchException {
-        boolean result = true;
-        String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
-        while (result) {
-            for (char value : encryptedArrayList) {
-                if (!alphabet.contains(String.valueOf(value))) {
-                result = false;
-                break;
-                }
-            }
-        break;
+        if (usedkey != 0) {
+            System.out.println("Нужный нам ключ для расшифровки:" + usedkey);
+            System.out.println("Расшифрованный файл :" + output);
+        } else {
+            System.out.println("Невозможно подобрать ключ, попробуйте увеличить значение ключа");
         }
-        return result;
     }
 
     public static ArrayList<Character> readDecodeWriteToArray(Path input, int key) throws IOException {
@@ -51,5 +36,20 @@ public class BrutForce {
             encryptedArrayList.add((char) (value - key));
         }
         return encryptedArrayList;
+    }
+
+    public static boolean checkArrayToAlphabet(ArrayList<Character> encryptedArrayList) throws InputMismatchException {
+        boolean result = true;
+        String alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtVvUuWwXxYyZzАаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя \n,.../!?'@#$%^$%^&*()—-_=+{}[]:;~«»…`\"";
+        while (result) {
+            for (char value : encryptedArrayList) {
+                if (!alphabet.contains(String.valueOf(value))) {
+                    result = false;
+                    break;
+                }
+            }
+            break;
+        }
+        return result;
     }
 }

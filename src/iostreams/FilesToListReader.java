@@ -10,10 +10,10 @@ public class FilesToListReader {
         BufferedReader reader = new BufferedReader(new FileReader(input.toFile()));
         List<Character> redCharArrayList = new ArrayList<>();
         int c;
-        while  ((c=reader.read())!= -1) {
+        while ((c = reader.read()) != -1) {
             redCharArrayList.add((char) c);
         }
         reader.close();
-  return redCharArrayList;
+        return redCharArrayList;
     }
 }

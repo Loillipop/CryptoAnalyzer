@@ -10,9 +10,9 @@ import java.util.List;
 public class ListToFilesWriter {
 
     public static String writeToFileReturnString(List<Character> outputArrayList, Path path) throws IOException {
-       File outputFile = new File(String.valueOf(path.getParent()), "OutputFile.txt");
+        File outputFile = new File(String.valueOf(path.getParent()), "OutputFile.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-        for (char c: outputArrayList) {
+        for (char c : outputArrayList) {
             writer.append(c);
         }
         writer.close();
