@@ -50,7 +50,7 @@ public class GoBabyGo {
                 case 4 -> {
                     printChoiseUser(Choise.STATICANALYZER);
                     Path input4 = pathToFile();
-                    StaticAnalyzer.letsMakeStaticAnalyze(input4);
+                    StaticAnalyzer.letsMakeStaticAnalyze(input4,255);
                 }
                 case 5 -> printChoiseUser(Choise.EXIT);
                 default -> System.out.println("Некорректный выбор. Введите перечисленные значения");
