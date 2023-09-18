@@ -35,8 +35,8 @@ public class StaticAnalyzer {
 
     public static StringBuilder convertListToString(ArrayList<Character> encryptedArrayList) throws InputMismatchException {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < encryptedArrayList.size(); i++) {
-            builder.append(encryptedArrayList.get(i));
+        for (Character character : encryptedArrayList) {
+            builder.append(character);
         }
         return builder;
     }
